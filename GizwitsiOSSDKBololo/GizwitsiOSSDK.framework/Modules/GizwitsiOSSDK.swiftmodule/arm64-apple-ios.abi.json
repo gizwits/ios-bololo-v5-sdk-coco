@@ -11690,6 +11690,43 @@
           },
           {
             "kind": "Var",
+            "name": "GIZ_SDK_OTA_DEVICE_CANCEL",
+            "printedName": "GIZ_SDK_OTA_DEVICE_CANCEL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GizwitsiOSSDK.GizOTAException.Type) -> GizwitsiOSSDK.GizOTAException",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GizOTAException",
+                    "printedName": "GizwitsiOSSDK.GizOTAException",
+                    "usr": "s:13GizwitsiOSSDK15GizOTAExceptionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "GizwitsiOSSDK.GizOTAException.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GizOTAException",
+                        "printedName": "GizwitsiOSSDK.GizOTAException",
+                        "usr": "s:13GizwitsiOSSDK15GizOTAExceptionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13GizwitsiOSSDK15GizOTAExceptionO25GIZ_SDK_OTA_DEVICE_CANCELyA2CmF",
+            "mangledName": "$s13GizwitsiOSSDK15GizOTAExceptionO25GIZ_SDK_OTA_DEVICE_CANCELyA2CmF",
+            "moduleName": "GizwitsiOSSDK"
+          },
+          {
+            "kind": "Var",
             "name": "GIZ_SDK_OTA_DEVICE_BUSY_IN_UPGRADE",
             "printedName": "GIZ_SDK_OTA_DEVICE_BUSY_IN_UPGRADE",
             "children": [
@@ -45317,21 +45354,28 @@
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1126,
+      "offset": 1097,
+      "length": 4,
+      "value": "8360"
+    },
+    {
+      "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1168,
       "length": 4,
       "value": "8354"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1175,
+      "offset": 1217,
       "length": 5,
       "value": "10003"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1229,
+      "offset": 1271,
       "length": 4,
       "value": "8356"
     },
@@ -45429,21 +45473,28 @@
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1126,
+      "offset": 1097,
+      "length": 4,
+      "value": "8360"
+    },
+    {
+      "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1168,
       "length": 4,
       "value": "8354"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1175,
+      "offset": 1217,
       "length": 5,
       "value": "10003"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1229,
+      "offset": 1271,
       "length": 4,
       "value": "8356"
     },
@@ -45541,21 +45592,28 @@
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1126,
+      "offset": 1097,
+      "length": 4,
+      "value": "8360"
+    },
+    {
+      "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1168,
       "length": 4,
       "value": "8354"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1175,
+      "offset": 1217,
       "length": 5,
       "value": "10003"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Exception\/GizOTAException.swift",
       "kind": "IntegerLiteral",
-      "offset": 1229,
+      "offset": 1271,
       "length": 4,
       "value": "8356"
     },
@@ -48123,29 +48181,36 @@
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Parse\/BaseParser.swift",
+      "kind": "StringLiteral",
+      "offset": 13128,
+      "length": 25,
+      "value": "\"com.gizwits.v5.snManage\""
+    },
+    {
+      "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Parse\/BaseParser.swift",
       "kind": "Array",
-      "offset": 13464,
+      "offset": 13592,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Parse\/BaseParser.swift",
       "kind": "BooleanLiteral",
-      "offset": 13493,
+      "offset": 13621,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Parse\/BaseParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 13529,
+      "offset": 13657,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/Kylewang\/Documents\/Project\/iossdkv5\/GizwitsiOSSDK\/Parse\/BaseParser.swift",
       "kind": "BooleanLiteral",
-      "offset": 13726,
+      "offset": 13854,
       "length": 5,
       "value": "false"
     },
