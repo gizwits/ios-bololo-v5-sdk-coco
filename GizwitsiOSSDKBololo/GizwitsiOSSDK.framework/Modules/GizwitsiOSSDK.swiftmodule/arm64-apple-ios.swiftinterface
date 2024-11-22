@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name GizwitsiOSSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import Combine
 import CoreBluetooth
 import CoreTelephony
@@ -98,38 +99,18 @@ public struct GizConfigStruct : Swift.Codable {
   public var netStatus: GizwitsiOSSDK.GizWifiDeviceNetStatus {
     get
   }
-  #if compiler(>=5.3) && $AsyncAwait
   public func getDeviceInfo() async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.DeviceInfoProfile?, GizwitsiOSSDK.GizCtrlException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func getDp(attrs: [Swift.String]?) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizJSON?, GizwitsiOSSDK.GizCtrlException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func connect() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizConnectException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func disConnect() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizConnectException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func provideWiFiCredentials(ssid: Swift.String, password: Swift.String, timeout: Swift.Int, processHandler: @escaping (GizwitsiOSSDK.GizWiFiActivatorEvent) -> ()) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizBaseProfile?, GizwitsiOSSDK.GizActivatorException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func stopProvideWiFiCredentials() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizActivatorException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func sendDp(data: GizwitsiOSSDK.GizJSON) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizJSON?, GizwitsiOSSDK.GizCtrlException?>
-  #endif
   public func removeDeviceDataListener(closure: @escaping (_ data: GizwitsiOSSDK.GizJSON) -> Swift.Void)
   public func addDeviceDataListener(closure: @escaping (_ data: GizwitsiOSSDK.GizJSON) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public func checkUpdate(firmwareType: GizwitsiOSSDK.GizOTAFirmwareType) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizCheckUpdateResultInfo, GizwitsiOSSDK.GizOTAException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func startUpgrade(firmwareType: GizwitsiOSSDK.GizOTAFirmwareType, progressHandler: @escaping (GizwitsiOSSDK.GizOTAProgressData) -> Swift.Void) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizOTAException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func cancelUpgrade() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizOTAException?>
-  #endif
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -300,9 +281,7 @@ public protocol GizBaseProfileProvider {
   }
   public func encode(to encoder: any Swift.Encoder) throws
   public func isSame(device: GizwitsiOSSDK.GizBaseProfile) -> Swift.Bool
-  #if compiler(>=5.3) && $AsyncAwait
   public func getDataPointConfig() async -> GizwitsiOSSDK.DataPointConfig?
-  #endif
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -615,9 +594,7 @@ public enum GizAPIException : Swift.Int, Swift.Codable {
   @objc deinit
 }
 extension GizwitsiOSSDK.GizUserManager {
-  #if compiler(>=5.3) && $AsyncAwait
   public func registerWithAccount(username: Swift.String, password: Swift.String) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizLoginResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
 }
 @_hasMissingDesignatedInitializers public class GizBleCapability : GizwitsiOSSDK.GizBaseCapability {
   override public func encode(to encoder: any Swift.Encoder) throws
@@ -1023,24 +1000,12 @@ public struct RegisterDeviceInfo : Swift.Codable {
 @preconcurrency public protocol _SwiftLogSendableLogHandler : Swift.Sendable {
 }
 extension GizwitsiOSSDK.GizUserManager {
-  #if compiler(>=5.3) && $AsyncAwait
   public func loginWithAccount(username: Swift.String, password: Swift.String) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizLoginResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func sendMobileLoginVerifyCode(phoneCode: Swift.String, phone: Swift.String, lang: Swift.String?) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizVerifyCodeResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func loginWithMobile(phoneCode: Swift.String, phone: Swift.String, code: Swift.String) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizLoginResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func loginWithEmail(email: Swift.String, code: Swift.String) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizLoginResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func sendEmailLoginVerifyCode(email: Swift.String, lang: Swift.String?) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizVerifyCodeResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func loginByAnonymous() async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizLoginResultInfo?, GizwitsiOSSDK.GizAPIException?>
-  #endif
 }
 open class GizResult<T, U> : Swift.Encodable where T : Swift.Encodable, U : Swift.Encodable {
   public var message: Swift.String? {
@@ -1126,36 +1091,16 @@ public enum GizAuth2AccountType : Swift.Int {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class GizUserManager : GizwitsiOSSDK.GizUserModel {
   public static let sharedInstance: GizwitsiOSSDK.GizUserManager
-  #if compiler(>=5.3) && $AsyncAwait
   public func sendVerifyMobileCodeWithPhone(phone: Swift.String, countryCode: Swift.Int) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func resetPasswordByPhone(phone: Swift.String, newPassword: Swift.String, code: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func resetPasswordByEmail(email: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func resetPasswordWithOldPassword(oldPassWord: Swift.String, newPassWord: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func transAnonymousUserToEmailUser(email: Swift.String, password: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func transAnonymousUserToPhoneUser(phone: Swift.String, password: Swift.String, code: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func transAnonymousUserToNormalUser(username: Swift.String, password: Swift.String) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func logout() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func changeUserInfo(info: GizwitsiOSSDK.GizUserProfile) async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func getUserInfo() async -> GizwitsiOSSDK.GizResult<Swift.Int?, GizwitsiOSSDK.GizAPIException?>
-  #endif
   public func getAuthorizeData() -> GizwitsiOSSDK.GizLoginResultInfo
   public func updateAuthorizeData(token: Swift.String, uid: Swift.String)
   @objc deinit
@@ -1213,8 +1158,11 @@ extension Foundation.Data {
     public init(rawValue: Swift.Int)
     public let rawValue: Swift.Int
     public static let upperCase: Foundation.Data.HexEncodingOptions
+    @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
     public typealias ArrayLiteralElement = Foundation.Data.HexEncodingOptions
+    @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
     public typealias Element = Foundation.Data.HexEncodingOptions
+    @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
     public typealias RawValue = Swift.Int
   }
   public func hexEncodedString(options: Foundation.Data.HexEncodingOptions = []) -> Swift.String
@@ -1229,19 +1177,13 @@ extension Foundation.Data {
     get
   }
   public static let sharedInstance: GizwitsiOSSDK.GizSDKManager
-  #if compiler(>=5.3) && $AsyncAwait
   public func feedback(uploadLog: Swift.Bool, contact: Swift.String, content: Swift.String) async
-  #endif
   public func initSDK(config: GizwitsiOSSDK.GizConfigStruct)
-  #if compiler(>=5.3) && $AsyncAwait
   public func getProductDataPointConfig(productKey: Swift.String) async -> Swift.String?
-  #endif
   public func startBleScan()
   public func stopBleScan()
   public func setDelegate(delegate: any GizwitsiOSSDK.GizSdkEventHandlerDelegate)
-  #if compiler(>=5.3) && $AsyncAwait
   public func getDevices() async -> Swift.Array<GizwitsiOSSDK.GizDevice>
-  #endif
   public func onDeviceListUpdate(devices: Swift.Array<GizwitsiOSSDK.GizBaseProfile>)
   public func onDeviceData(device: GizwitsiOSSDK.GizBaseProfile, result: GizwitsiOSSDK.GizJSON, type: GizwitsiOSSDK.GizCapability)
   public func onDeviceState(device: GizwitsiOSSDK.GizBaseProfile, type: GizwitsiOSSDK.GizCapability)
@@ -1254,12 +1196,8 @@ extension GizwitsiOSSDK.GizSDKManager {
 @_hasMissingDesignatedInitializers public class ProductManager {
   public static let sharedInstance: GizwitsiOSSDK.ProductManager
   public func initWithDomain(domain: Swift.String)
-  #if compiler(>=5.3) && $AsyncAwait
   public func getConfig(productKey: Swift.String) async -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func getConfigStruct(productKey: Swift.String) async -> GizwitsiOSSDK.DataPointConfig?
-  #endif
   @objc deinit
 }
 public struct DataPointPosition : Swift.Codable {
@@ -1434,18 +1372,10 @@ public protocol GizSdkEventHandlerDelegate {
   }
   override public func encode(to encoder: any Swift.Encoder) throws
   public init(bleDevice: GizwitsiOSSDK.GizBleProfile?, lanDevice: GizwitsiOSSDK.GizLanProfile?, mqttDevice: GizwitsiOSSDK.GizMqttProfile?)
-  #if compiler(>=5.3) && $AsyncAwait
   public func register() async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizRegisterDeviceResultInfo, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func updateDeviceInfo(alias: Swift.String?, remark: Swift.String?) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizUpdateDeviceResultInfo, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func bind(alias: Swift.String?, remark: Swift.String?) async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizBindDeviceResultInfo, GizwitsiOSSDK.GizAPIException?>
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func unBind() async -> GizwitsiOSSDK.GizResult<GizwitsiOSSDK.GizUnBindDeviceResultInfo, GizwitsiOSSDK.GizAPIException?>
-  #endif
   @objc deinit
 }
 public enum GizConnectException : Swift.Int, Swift.Codable {
