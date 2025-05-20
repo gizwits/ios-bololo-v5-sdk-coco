@@ -49549,6 +49549,13 @@
       "value": "\"productConfig\""
     },
     {
+      "filePath": "\/Users\/codemak1r\/Documents\/gizwits_sdk\/iossdk\/GizwitsiOSSDK\/Utils\/ProductManager\/ProductManager.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 34,
+      "value": "\"com.gizwits.productmanager.cache\""
+    },
+    {
       "filePath": "\/Users\/codemak1r\/Documents\/gizwits_sdk\/iossdk\/GizwitsiOSSDK\/Exception\/GizCtrlException.swift",
       "kind": "IntegerLiteral",
       "offset": 189,
